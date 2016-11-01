@@ -1,0 +1,18 @@
+<div class="contents" >
+  <% @kakei.each do |kakei| %>
+    <p><%= kakei.day %></p>
+    <p><%= kakei.price %></p>
+    <p><%= kakei.use %></p>
+    <p><%= kakei.text %></p>
+  <% end %>
+</div>
+
+<div class="contents input">
+  <%= form_tag('/kakei', method: :post) do %>
+    <input placeholder="日付" type="text" name="day"><br>
+    <input placeholder="金額" type="integer" name="price"><br>
+    <input placeholder="費目" type="text" name="use"><br>
+    <textarea cols="30" name="text" placeholder="メモ" rows="5"></textarea><br>
+    <input type="submit" value="入力"><br>
+  <% end %>
+</div>
