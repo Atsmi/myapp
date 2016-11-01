@@ -1,3 +1,3 @@
   Rails.application.routes.draw do
-    get 'syokuhi' => 'syokuhi#index'
+    get 'kakei' => 'kakei#index'
   end
