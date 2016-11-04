@@ -8,7 +8,12 @@ class KakeiController < ApplicationController
   end
 
   def create
-    Kakei.create(day:"", price: "", use:"", text:"")
+    Kakei.create(kakei_params)
+  end
+
+  private
+  def kakei_params
+    params.permit(:day, :price, :use, :text)
   end
 
 end
