@@ -1,7 +1,11 @@
 class KakeiController < ApplicationController
 
   def index
-    @kakei = Kakei.all
+
+  end
+
+  def list
+    @kakei = Kakei.all.order("day ASC")
   end
 
   def new
